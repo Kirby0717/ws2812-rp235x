@@ -1,0 +1,17 @@
+[package]
+name = "ws2812-rp235x"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+authors = ["Kirby0717 <niconicoyusei@gmail.com>"]
+description = "RP235xを使用してWS2812を光らせるライブラリ"
+readme = "README.md"
+
+[dependencies]
+cortex-m = "0.7"
+rp235x-hal = "0.3"
+smart-leds = "0.4"
+pio-proc = "0.2"
+pio = "0.2"
+nb = "1"
+
