@@ -7,6 +7,7 @@ authors = ["Kirby0717 <niconicoyusei@gmail.com>"]
 description = "RP235xを使用してWS2812を光らせるライブラリ"
 readme = "README.md"
 repository = "https://github.com/Kirby0717/ws2812-rp235x"
+categories = ["embedded"]
 
 [dependencies]
 cortex-m = "0.7"
