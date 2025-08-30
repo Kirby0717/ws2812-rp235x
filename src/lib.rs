@@ -12,7 +12,7 @@ use rp235x_hal::{
     pio::{PIO, PIOExt, StateMachineIndex, Tx, UninitStateMachine},
     timer::{CountDown, TimerDevice},
 };
-use smart_leds::SmartLedsWrite;
+use smart_leds_trait::{RGB8, SmartLedsWrite};
 
 pub struct Ws2812Direct<P, SM, I>
 where
@@ -101,7 +101,7 @@ where
     P: PIOExt,
     SM: StateMachineIndex,
 {
-    type Color = smart_leds::RGB8;
+    type Color = RGB8;
     type Error = ();
     fn write<T, C>(&mut self, iterator: T) -> Result<(), ()>
     where
@@ -159,7 +159,7 @@ where
     P: PIOExt,
     SM: StateMachineIndex,
 {
-    type Color = smart_leds::RGB8;
+    type Color = RGB8;
     type Error = ();
     fn write<T, J>(&mut self, iterator: T) -> Result<(), ()>
     where
